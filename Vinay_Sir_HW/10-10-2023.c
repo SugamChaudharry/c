@@ -2,8 +2,8 @@
 
 int sum();
 int length(int num);
-int factor();
-int perfectNo();
+int factor(int num);
+int perfectNo(int num);
 // int power();
 // int product();
 // int prime();
@@ -16,22 +16,31 @@ int main()
     char firstName;
 
     printf("write following text for opration given below; \n"
-    "a         => to find sum of digit. \n"
-    "b      => to find sum of digit. \n"
-    "c   => to find sum of digit. \n"
-    "d       => to find sum of digit. \n"
-    "e     => to find sum of digit. \n"
-    "f       => to find sum of digit. \n"
-    "g   => to find sum of digit. \n"
+    "a   => to find sum of digit. \n"
+    "b         => find factor. \n"
+    "c      => to check number is a perfect number or not a perfect number. \n"
+    "d   => to input a,b and calculate a power b without ussing ** opractor \n"
+    "e       => to a*b without using * opractor \n"
+    "f     => to check prime number or not a prime number \n"
+    "g       => to print fibonacci of n terms\n"
     );
     scanf("%c", &firstName);
     switch (firstName)
     {
     case 'a':  sum();
         break;
-    case 'b':  factor();
-        break;
-    case 'c':  perfectNo();
+    case 'b':{  int num;
+                printf("Enter a number for factor : ");
+                scanf("%d",&num);
+                factor(num);
+            } 
+            break;
+    case 'c':{
+                int num;
+                printf("Enter a number to find it is perfect or not : ");
+                scanf("%d",&num);
+                perfectNo(num);
+            }
         break;
     case 'd':  printf("not a function");//power();
         break;
@@ -89,23 +98,37 @@ int sum(){
 }
 
 //Q2} w.a.p to find factor.
-int factor(){
-    int num;
-    printf("Enter a number for factor : ");
-    scanf("%d",&num);
+int factor(int num){
     for (int i = 1; i <= num; i++)
     {
         if (num%i==0)
         {
             printf("%d ",i);
         }
-        
     }
     
 }
 //Q3} w.a.p to check number is a perfect number or not a perfect number.
-perfectNo(){
+int perfectNo(int num){
+    int sum = 0 , copy = num;
+    for (int i = 1; i < num; i++)
+    {
+        if (num%i==0)
+        {
+            sum = sum +i;
+        }
+    }
+
+    if (sum == copy)
+    {
+        printf("%d is a perfect number ", copy);
+    }else
+    {
+        printf("%d is not a perfect number ", copy);
+
+    }
     
+    // printf("%d",sum);
 }
 //Q7} w.a.p to print fibonacci of n terms
 int fibonacci(){

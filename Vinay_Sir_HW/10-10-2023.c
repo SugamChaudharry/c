@@ -1,8 +1,14 @@
 # include <stdio.h>
 
 int sum();
-int fibonacci();
 int length(int num);
+int factor();
+int perfectNo();
+// int power();
+// int product();
+// int prime();
+int fibonacci();
+
 
 int main()
 {
@@ -21,16 +27,11 @@ int main()
     scanf("%c", &firstName);
     switch (firstName)
     {
-    case 'a': { 
-            int n;
-            printf("enter a value \n");
-            scanf("%d",&n);
-            sum(n);
-        }
+    case 'a':  sum();
         break;
-    case 'b':  printf("not a function");//factor();
+    case 'b':  factor();
         break;
-    case 'c':  printf("not a function");//perfectNo();
+    case 'c':  perfectNo();
         break;
     case 'd':  printf("not a function");//power();
         break;
@@ -43,13 +44,6 @@ int main()
     default:printf("not yet");
         break;
     }
-    // int sum();
-    // int factor();
-    // int perfectNo();
-    // int power();
-    // int product();
-    // int prime();
-    // int fibonacci();
     return 0;
 }
 /*
@@ -80,7 +74,10 @@ int length(int num){
 
 
 //Q1} w.a.p to find sum of 
-int sum(int num){
+int sum(){
+    int num;
+    printf("enter a value \n");
+    scanf("%d",&num);
     int sapDig , adding=0;
             while (num >0)
             {
@@ -89,6 +86,26 @@ int sum(int num){
                 num /= 10;
             }
     printf("%d", adding);
+}
+
+//Q2} w.a.p to find factor.
+int factor(){
+    int num;
+    printf("Enter a number for factor : ");
+    scanf("%d",&num);
+    for (int i = 1; i <= num; i++)
+    {
+        if (num%i==0)
+        {
+            printf("%d ",i);
+        }
+        
+    }
+    
+}
+//Q3} w.a.p to check number is a perfect number or not a perfect number.
+perfectNo(){
+    
 }
 //Q7} w.a.p to print fibonacci of n terms
 int fibonacci(){

@@ -17,10 +17,10 @@ int main()
 
     printf("write following text for opration given below; \n"
     "a   => to find sum of digit. \n"
-    "b         => find factor. \n"
+    "b         =>to find factor. \n"
     "c      => to check number is a perfect number or not a perfect number. \n"
-    "d   => to input a,b and calculate a power b without ussing ** opractor \n"
-    "e       => to a*b without using * opractor \n"
+    "d   => to  calculate power of a number \n"
+    "e       => to product two numbers \n"
     "f     => to check prime number or not a prime number \n"
     "g       => to print fibonacci of n terms\n"
     );

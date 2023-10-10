@@ -42,11 +42,11 @@ int main()
                 perfectNo(num);
             }
         break;
-    case 'd':  printf("not a function");//power();
+    case 'd':  printf("function is not written yet..");//power();
         break;
-    case 'e'://product();
+    case 'e':printf("function is not written yet..");//product();
         break;
-    case 'f':  printf("not a function");//prime();
+    case 'f':  printf("function is not written yet..");//prime();
         break;
     case 'g': fibonacci();
         break;

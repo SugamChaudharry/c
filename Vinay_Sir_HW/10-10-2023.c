@@ -1,12 +1,13 @@
 # include <stdio.h>
+#include <stdbool.h>
 
 int sum();
 int length(int num);
 int factor(int num);
 int perfectNo(int num);
-// int power();
-// int product();
-// int prime();
+int power(int a, int b);
+int multiply(int a, int b);
+bool isPrime(int n);
 int fibonacci();
 
 
@@ -42,11 +43,35 @@ int main()
                 perfectNo(num);
             }
         break;
-    case 'd':  printf("function is not written yet..");//power();
+    case 'd': {
+                int a,b;
+                printf("Enter no one : ");
+                scanf("%d",&a);
+                printf("Enter no two : ");
+                scanf("%d",&b);
+                power(a,b);
+    }
         break;
-    case 'e':printf("function is not written yet..");//product();
+    case 'e':{
+        int a, b;
+        printf("Enter first number (a): ");
+        scanf("%d", &a);
+        printf("Enter second number (b): ");
+        scanf("%d", &b);
+        printf("%d * %d = %d\n", a, b, multiply(a, b));
+    }
         break;
-    case 'f':  printf("function is not written yet..");//prime();
+    case 'f':  {
+        int num;
+        printf("Enter a number: ");
+        scanf("%d", &num);
+        if (isPrime(num)) {
+            printf("%d is a prime number.\n", num);
+        } else {
+            printf("%d is not a prime number.\n", num);
+        }
+
+    }
         break;
     case 'g': fibonacci();
         break;
@@ -129,6 +154,37 @@ int perfectNo(int num){
     }
     
     // printf("%d",sum);
+}
+//Q4} w.a.p to input a,b and calculate a power b without ussing ** opractor
+int power(int a, int b) {
+    int result = 1;
+    while (b > 0) {
+        result *= a;
+        b--;
+    }
+    printf("%d",result);
+
+}
+// Q5} w.a.p to a*b without using * opractor 
+int multiply(int a, int b) {
+    int result = 0;
+    while (b > 0) {
+        result += a;
+        b--;
+    }
+    return result;
+}
+// Q6} w.a.p to check prime number or not a prime number
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
 }
 //Q7} w.a.p to print fibonacci of n terms
 int fibonacci(){

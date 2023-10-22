@@ -43,12 +43,12 @@ Print these patterns using loops:
     *
 
 
-6.       *
+6.
+         *
         **
        ***
       ****
      *****
-
 
 7.   *****
       ****

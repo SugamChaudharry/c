@@ -12,6 +12,7 @@ int pattern9(int n);
 int pattern10(int n);
 int pattern11(int n);
 int pattern12(int n);
+int pattern21(int n);
 int pattern28(int n);
 int main()
 {int n = 5;
@@ -39,6 +40,8 @@ int main()
     pattern11(n);
     printf("Q12-------------------------------------------\n");
     pattern12(n);
+    printf("Q21-------------------------------------------\n");
+    pattern21(n);
     printf("Q28-------------------------------------------\n");
     pattern28(n);
     return 0;
@@ -318,6 +321,26 @@ int pattern12(int n){
         for (int col = 0; col < row; col++)
         {
             printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+/*
+21.    1
+       2  3
+       4  5  6
+       7  8  9  10
+       11 12 13 14 15
+*/
+int pattern21(int n)
+{
+    int a = 1;
+    for (int row = 1; row <= n; row++)
+    {
+        for (int col = 0; col < row; col++, a++)
+        {
+            printf("%d ", a);
         }
         printf("\n");
     }

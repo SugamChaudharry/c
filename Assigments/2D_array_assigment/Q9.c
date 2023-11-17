@@ -29,6 +29,9 @@ int main()
     }
 
     printf("\n");
+
+
+    int notEqual = 0;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -37,7 +40,22 @@ int main()
         }
         printf("\n");
     }
-    printf("\t +\n");
+
+    for (int a = 0; a < m; a++)
+    {
+        for (int b = 0; b < n; b++)
+        {
+            if (arr[a][b] != arr2[a][b])
+                notEqual = 1;
+        }
+    }
+    if (notEqual == 0)
+    {
+        printf("\n  is equal to  \n\n");
+    }
+    else{
+        printf("\n  is not equal to  \n\n");
+    }
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -47,12 +65,4 @@ int main()
         printf("\n");
     }
     printf("\n");
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf(" %d \t", arr[i][j] + arr2[i][j]);
-        }
-        printf("\n");
-    }
 }

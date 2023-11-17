@@ -1,6 +1,5 @@
 // WAP to input a 2D array and display diagonal elements in matrix form.
 
-// WAP to input a 2D array and find the sum of its diagonal elements.
 #include <stdio.h>
 int main()
 {

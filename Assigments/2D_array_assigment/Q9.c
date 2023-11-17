@@ -1,4 +1,4 @@
-// ⦁	WAP to input 2 matrices from the user and add them.
+// ⦁	WAP to input a matrix and check if its identity matrix or not.
 
 #include <stdio.h>
 
@@ -27,6 +27,7 @@ int main()
             scanf("%d", &arr2[i][j]);
         }
     }
+
     printf("\n");
     for (int i = 0; i < m; i++)
     {

@@ -1,4 +1,4 @@
-// WAP to input a 2D array of size M*N and display boundary elements in matrix form.
+// WAP to input a 2D array of size M*N and display the transpose of it.
 #include <stdio.h>
 int main()
 {
@@ -18,20 +18,12 @@ int main()
         }
     }
     printf("\n");
-    for (int i = 0; i < m; i++)
+    for (int j = 0; j < n; j++)
     {
-        for (int j = 0; j < n; j++)
+        for (int i = 0; i < m; i++)
         {
-            if (i == 0 || i == m-1 || j == 0 || j == n-1 )
-            {
-            printf(" %d \t", arr[i][j]); 
-            }
-            else{
-
-            printf("\t");
-            }
+            printf(" %d \t", arr[i][j]);
         }
         printf("\n");
     }
-    
 }

@@ -2,7 +2,8 @@
 #include <string.h>
 int main()
 {
-    char str[100],find;
+    char str[100];
+    char find;
     int i;
     printf("Enter the string: ");
     gets(str);

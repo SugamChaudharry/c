@@ -8,10 +8,10 @@ int main()
     printf("in reverse with function :%s\n" , strrev(str));
     int i=0 , len = strlen(str);
     char temp;
-    while (str[i]< len-i-1)
+    while ( i< len-i-1)
     {
         temp=str[i];
-        str[i]=str[len-1];
+        str[i]=str[len-1-i];
         str[len-i-1]=temp;
         i++;
     }
